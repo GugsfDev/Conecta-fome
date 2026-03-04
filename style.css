@@ -4,20 +4,17 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f4f6f8;
     color: #333;
+    line-height: 1.6;
 }
 
 /* NAVBAR */
 
 nav {
-    background-color: #8C0327;
+    background-color: #be2a2a;
     padding: 15px 0;
 }
 
@@ -29,75 +26,99 @@ nav ul {
 }
 
 nav a {
-    text-decoration: none;
     color: white;
     font-weight: 600;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #A9CBD9;
+    opacity: 0.8;
 }
 
 /* HERO */
 
 .hero {
+    background: linear-gradient(135deg, #be2a2a, #7a0f0f);
+    color: white;
+    padding: 120px 20px;
     text-align: center;
-    padding: 100px 20px;
-    background-color: #A9CBD9;
 }
 
 .hero h1 {
     font-size: 3rem;
-    color: #8C0327;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.hero p {
+.hero-text {
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 40px;
 }
+
+.impacto {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.impacto-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.impacto-card h2 {
+    font-size: 2rem;
+}
+
+/* BOTÃO HERO */
 
 .btn-hero {
-    background-color: #8C0327;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 6px;
+    display: inline-block;
+    background: white;
+    color: #be2a2a;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
     transition: 0.3s;
 }
 
 .btn-hero:hover {
-    background-color: #BF0436;
+    transform: translateY(-3px);
 }
 
 /* SEÇÕES */
 
 section {
-    padding: 80px 20px;
+    padding: 60px 20px;
     max-width: 1100px;
     margin: auto;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 40px;
-    color: #8C0327;
+    margin-bottom: 20px;
+    color: #be2a2a;
 }
+
+/* CARDS */
 
 .etapas {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .card {
     background-color: white;
-    padding: 25px;
+    padding: 20px;
     width: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
 
@@ -105,74 +126,41 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* IMPACTO */
-
-#impacto {
-    background-color: #A9CBD9;
-    text-align: center;
-}
-
-.dados {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.numero h3 {
-    font-size: 2rem;
-    color: #8C0327;
-}
-
-/* PARCERIA */
-
-#parceria {
-    text-align: center;
-}
+/* BOTÃO PARCEIRO */
 
 .btn-parceiro {
     display: inline-block;
-    margin-top: 20px;
-    background-color: #8C0327;
+    background-color: #be2a2a;
     color: white;
     padding: 12px 25px;
+    font-size: 16px;
     border-radius: 6px;
-    text-decoration: none;
+    margin-top: 20px;
     transition: 0.3s;
 }
 
 .btn-parceiro:hover {
-    background-color: #BF0436;
+    opacity: 0.9;
 }
 
-/* FOOTER */
-
-footer {
-    background-color: #254159;
-    color: white;
+#parceria {
     text-align: center;
-    padding: 20px;
 }
 
 /* RESPONSIVO */
 
 @media (max-width: 768px) {
 
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 15px;
     }
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
     .card {
         width: 100%;
-    }
-
-    .dados {
-        flex-direction: column;
-        gap: 20px;
     }
 }
